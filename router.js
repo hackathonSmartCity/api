@@ -5,8 +5,6 @@ var userController = require('./controllers/user.controller');
 
 router.post('/auth/facebook', userController.loginFacebook);
 
-router.get('/user/:userId', userController.getUser);
-
 router.get('/', function (req, res) {
     return res.status(200).send({
         "app": "API",
