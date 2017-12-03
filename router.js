@@ -4,6 +4,7 @@ var router = new express.Router();
 var userController = require('./controllers/user.controller');
 
 router.post('/auth/facebook', userController.loginFacebook);
+router.post('/user', userController.createUser);
 
 router.get('/', function (req, res) {
     return res.status(200).send({
